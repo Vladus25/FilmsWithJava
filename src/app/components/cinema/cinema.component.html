@@ -1,0 +1,26 @@
+
+<div class="bg-info text-black text-center">
+  <h1>Welcome to the Cinema</h1>
+  <select [(ngModel)]="selectedGenere" (ngModelChange)="onSelect(selectedGenere)">
+    <option value="All" selected>All</option>
+    <option *ngFor="let f of films" [value]="f.genere">{{f.genere}}</option>
+  </select>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 mt-3" *ngFor="let f of films | genreFilter:selectedGenere">
+      <div class="card" style="width: 100%;"> <img class="card-img-top" src='{{f.img}}'>
+        <h4>Titolo : {{f.titolo}}</h4>
+        <h5>Genere : {{f.genere}}</h5>
+        <h6>Data di Uscita : {{f.data}}</h6>
+        <div>
+          <button (click)="deleteFilm(f.id)">Elimina</button>
+          <button  (click)="openEditDialog(f.id)">update</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

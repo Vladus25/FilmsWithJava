@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Modifica film</h2>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Titolo" [(ngModel)]="film.titolo" [value]="film.titolo" name="titolo">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Genere" [(ngModel)]="film.genere" name="genere" [value]="film.genere">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Data" [(ngModel)]="film.data" name="data" [value]="film.data">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="URL immagine" [(ngModel)]="film.img" name="img" [value]="film.img">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Annulla</button>
+  <button mat-raised-button color="primary" (click)="onSave()">Salva</button>
+</div>
+

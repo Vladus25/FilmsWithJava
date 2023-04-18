@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SpringConnectionService } from './services/spring-connection.service';
 
 @Component({
   selector: 'app-root',

@@ -1,0 +1,11 @@
+<form>
+  <label>Titolo:</label>
+  <input [(ngModel)]="film.titolo" name="titolo"><br>
+  <label>Genere:</label>
+  <input [(ngModel)]="film.genere" name="genere"><br>
+  <label>Regista:</label>
+  <input [(ngModel)]="film.data" name="data"><br>
+  <label>Durata:</label>
+  <input [(ngModel)]="film.img" name="img"><br>
+  <button (click)="postFilm()">Aggiungi film</button>
+</form>
